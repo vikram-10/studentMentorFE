@@ -23,7 +23,7 @@ let tableBody=document.createElement('tbody');
 
 async function getMentors(){
     let count=1;
-    var allMentors=await fetch('https://student-mentor.herokuapp.com//showMentors');
+    var allMentors=await fetch('https://student-mentor.herokuapp.com/showMentors');
     var finalMentorData=await allMentors.json();
     console.log(finalMentorData);
     finalMentorData.forEach(element => {
@@ -56,7 +56,7 @@ tableRow.append(tableData2);
     tableData3.addEventListener("click",async function(){
         let studentName1=localStorage.getItem('name');
         try{
-        let enrolling=await fetch(`https://student-mentor.herokuapp.com//assignStudent/${element._id}/${studentName1}`,{
+        let enrolling=await fetch(`https://student-mentor.herokuapp.com/assignStudent/${element._id}/${studentName1}`,{
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
