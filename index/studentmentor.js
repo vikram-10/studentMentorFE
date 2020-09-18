@@ -16,7 +16,7 @@ table.innerHTML=`  <thead>
 async function getStudents(){
     try{
         let count=1;
-    var studData=await fetch('https://student-mentor2.herokuapp.com//showStudents');
+    var studData=await fetch('https://student-mentor2.herokuapp.com/showStudents');
     var finalStudData=await studData.json();
     finalStudData.forEach(element => {
         if(element.status!="assigned"){
