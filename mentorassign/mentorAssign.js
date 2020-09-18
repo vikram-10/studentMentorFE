@@ -23,7 +23,7 @@ let tableBody=document.createElement('tbody');
 
 async function getMentors(){
     let count=1;
-    var allMentors=await fetch('http://student-mentor2.herokuapp.com/showMentors');
+    var allMentors=await fetch('https://student-mentor2.herokuapp.com/showMentors');
     var finalMentorData=await allMentors.json();
     console.log(finalMentorData);
     finalMentorData.forEach(element => {
